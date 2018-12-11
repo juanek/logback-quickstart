@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    
+    <property name="PATH" value="/home/juan/logs" />
+    <property name="PATH_BACKUP" value="/home/juan/logs/backups" />
+    
+    <property name="APP" value="myapp" />
+    
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/${APP}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${PATH_BACKUP}/${APP}.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="ar.com.jekipes" level="INFO" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>  
+    <logger name="ar.com.jekipes.Simple" level="TRACE" >
+        <appender-ref ref="FILE" />
+    </logger> 
+    <root level="OFF">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
