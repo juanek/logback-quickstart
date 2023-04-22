@@ -1,4 +1,4 @@
-package ar.com.jekipes;
+package ar.com.juanek;
 
 /**
  * Hello world!

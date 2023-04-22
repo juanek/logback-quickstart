@@ -9,7 +9,7 @@
     <logger name="ar.com.jekipes" level="INFO" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>  
-	<logger name="ar.com.jekipes.HierarchyLogs" level="DEBUG">
+	<logger name="ar.com.juanek.HierarchyLogs" level="DEBUG">
         <appender-ref ref="STDOUT" />
     </logger> 
     <root level="OFF">

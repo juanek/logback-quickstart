@@ -1,4 +1,4 @@
-package ar.com.jekipes;
+package ar.com.juanek;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
