@@ -1,9 +1,11 @@
 package ar.com.jekipes;
 
-import static org.junit.Assert.assertTrue;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
+
 /**
  * 
  * @author juan kipes
